@@ -4,9 +4,9 @@
   "description": "Node.js project with JWT authentication, Prisma ORM, and Facial Recognition API",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
-    "start:all": "./scripts/start-services.sh",
+    "start": "node init && node index.js",
+    "dev": "node init && nodemon index.js",
+    "start:all": "node init && ./scripts/start-services.sh",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
     "test:health": "curl http://localhost:3000/health"
